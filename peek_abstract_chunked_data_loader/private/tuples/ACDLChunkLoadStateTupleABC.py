@@ -4,7 +4,7 @@ from abc import abstractmethod
 logger = logging.getLogger(__name__)
 
 
-class ADLChunkLoadStateTupleABC:
+class ACDLChunkLoadStateTupleABC:
     """ Agent Import Chunk
 
     This table stores information used by the agent about when things need updating.
@@ -41,10 +41,9 @@ class ADLChunkLoadStateTupleABC:
 
         Example code:
 
-            return EncodedSearchIndexChunk(id=row.id,
+            return GraphSegmentLoadStateTuple(id=row.id,
                                             chunkKey=row.chunkKey,
-                                            encodedData=row.encodedData,
-                                            encodedHash=row.encodedHash,
-                                            lastUpdate=row.lastUpdate)
+                                            lastImportDate=row.lastImportDate,
+                                            lastImportHash=row.lastImportHash)
         """
         raise NotImplementedError()

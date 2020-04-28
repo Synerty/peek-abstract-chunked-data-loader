@@ -1,25 +1,25 @@
 import logging
+from abc import ABCMeta
 from typing import Optional
 
+from peek_abstract_chunked_data_loader.private.tuples.ACDLChunkLoadStateTupleABC import \
+    ACDLChunkLoadStateTupleABC
 from peek_plugin_base.storage.LoadPayloadPgUtil import getTuplesPayloadBlocking
 from peek_storage.plpython.LoadPayloadPgUtil import LoadPayloadTupleResult
 from sqlalchemy import select
 from sqlalchemy.sql import Select
 
-from peek_abstract_data_loader._private.storage.ADLChunkLoadStateTupleABC import \
-    ADLChunkLoadStateTupleABC
-
 logger = logging.getLogger(__name__)
 
 
-class ADLRpcForAgentImportABC:
-    _StateTupleDeclarative: ADLChunkLoadStateTupleABC = None
+class ACDLRpcForAgentImportABC(metaclass=ABCMeta):
+    _StateTupleDeclarative: ACDLChunkLoadStateTupleABC = None
 
     def __init__(self, dbSessionCreator):
         self._dbSessionCreator = dbSessionCreator
 
     # -------------
-    def ckiInitialLoalOfStatePayloadBlocking(self, offset: int,
+    def adlInitialLoadOfStatePayloadBlocking(self, offset: int,
                                              count: int,
                                              sql: Optional[Select] = None
                                              ) -> Optional[bytes]:

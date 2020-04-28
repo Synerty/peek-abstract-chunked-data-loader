@@ -1,11 +1,11 @@
 from peek_plugin_base.storage.DbConnection import DbSessionCreator
-from peek_abstract_data_loader._private.server.admin_backend.AppSettingHandler import \
+from peek_abstract_chunked_data_loader.private.server.admin_backend.AppSettingHandler import \
     makeAppSetttingsHandler
-from peek_abstract_data_loader._private.server.admin_backend.CustomAttrTableHandler import \
+from peek_abstract_chunked_data_loader.private.server.admin_backend.CustomAttrTableHandler import \
     makeCustomAttrTableHandler
 from vortex.handler.TupleDataObservableHandler import TupleDataObservableHandler
 
-from peek_abstract_data_loader._private.server.admin_backend.CustomHeaderTableHandler import \
+from peek_abstract_chunked_data_loader.private.server.admin_backend.CustomHeaderTableHandler import \
     makeCustomHeaderTableHandler
 from .SettingPropertyHandler import makeSettingPropertyHandler
 

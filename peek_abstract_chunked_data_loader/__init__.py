@@ -8,10 +8,10 @@ __version__ = '0.0.0'
 
 
 def peekServerEntryHook() -> Type[PluginServerEntryHookABC]:
-    from ._private.server.ServerEntryHook import ServerEntryHook
+    from .private.server.ServerEntryHook import ServerEntryHook
     return ServerEntryHook
 
 
 def peekAgentEntryHook() -> Type[PluginAgentEntryHookABC]:
-    from ._private.agent.AgentEntryHook import AgentEntryHook
+    from .private.agent.AgentEntryHook import AgentEntryHook
     return AgentEntryHook

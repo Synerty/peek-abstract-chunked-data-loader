@@ -2,8 +2,8 @@ from sqlalchemy import Column, Boolean
 from sqlalchemy import Integer, String
 from vortex.Tuple import Tuple, addTupleType
 
-from peek_abstract_data_loader._private.PluginNames import abstracDataLoaderTuplePrefix
-from peek_abstract_data_loader._private.storage.DeclarativeBase import DeclarativeBase
+from peek_abstract_chunked_data_loader._private.PluginNames import abstracDataLoaderTuplePrefix
+from peek_abstract_chunked_data_loader._private.storage.DeclarativeBase import DeclarativeBase
 
 
 @addTupleType

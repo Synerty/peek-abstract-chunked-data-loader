@@ -9,7 +9,7 @@ from setuptools import find_packages
 #
 author = "Synerty"
 author_email = 'contact@synerty.com'
-py_package_name = "peek_abstract_data_loader"
+py_package_name = "peek_abstract_chunked_data_loader"
 pip_package_name = py_package_name.replace('_', '-')
 package_version = '0.0.0'
 description = 'Peek Plugin AbstractDataLoader - My first enhancement.'

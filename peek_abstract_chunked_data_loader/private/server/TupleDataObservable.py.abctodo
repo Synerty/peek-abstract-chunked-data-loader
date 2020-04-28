@@ -1,10 +1,10 @@
-from peek_abstract_data_loader._private.PluginNames import abstracDataLoaderFilt
-from peek_abstract_data_loader._private.PluginNames import abstracDataLoaderObservableName
-from peek_abstract_data_loader._private.server.controller.MainController import \
+from peek_abstract_chunked_data_loader._private.PluginNames import abstracDataLoaderFilt
+from peek_abstract_chunked_data_loader._private.PluginNames import abstracDataLoaderObservableName
+from peek_abstract_chunked_data_loader._private.server.controller.MainController import \
     MainController
-from peek_abstract_data_loader._private.server.tuple_providers.LoaderStatusTupleProvider import \
+from peek_abstract_chunked_data_loader._private.server.tuple_providers.LoaderStatusTupleProvider import \
     LoaderStatusTupleProvider
-from peek_abstract_data_loader._private.tuples.LoaderStatusTuple import \
+from peek_abstract_chunked_data_loader._private.tuples.LoaderStatusTuple import \
     LoaderStatusTuple
 from vortex.handler.TupleDataObservableHandler import TupleDataObservableHandler
 

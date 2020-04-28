@@ -2,8 +2,8 @@ import logging
 
 from vortex.sqla_orm.OrmCrudHandler import OrmCrudHandler, OrmCrudHandlerExtension
 
-from peek_abstract_data_loader._private.PluginNames import abstracDataLoaderFilt
-from peek_abstract_data_loader._private.storage.AppServerSettingsTuple import \
+from peek_abstract_chunked_data_loader._private.PluginNames import abstracDataLoaderFilt
+from peek_abstract_chunked_data_loader._private.storage.AppServerSettingsTuple import \
     AppServerSettingsTuple
 
 logger = logging.getLogger(__name__)

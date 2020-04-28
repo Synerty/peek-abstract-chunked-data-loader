@@ -6,16 +6,16 @@ import pytz
 from vortex.rpc.RPC import vortexRPC
 
 from peek_plugin_base.PeekVortexUtil import peekServerName, peekAgentName
-from peek_abstract_data_loader._private.PluginNames import abstracDataLoaderFilt
-from peek_abstract_data_loader._private.server.controller.MainController import \
+from peek_abstract_chunked_data_loader._private.PluginNames import abstracDataLoaderFilt
+from peek_abstract_chunked_data_loader._private.server.controller.MainController import \
     MainController
-from peek_abstract_data_loader._private.storage.AppServerSettingsTuple import \
+from peek_abstract_chunked_data_loader._private.storage.AppServerSettingsTuple import \
     AppServerSettingsTuple
-from peek_abstract_data_loader._private.storage.CustomAttrTuple import \
+from peek_abstract_chunked_data_loader._private.storage.CustomAttrTuple import \
     CustomAttrTuple
-from peek_abstract_data_loader._private.storage.CustomHeaderTuple import \
+from peek_abstract_chunked_data_loader._private.storage.CustomHeaderTuple import \
     CustomHeaderTuple
-from peek_abstract_data_loader._private.storage.Setting import globalSetting, \
+from peek_abstract_chunked_data_loader._private.storage.Setting import globalSetting, \
     globalProperties
 
 logger = logging.getLogger(__name__)

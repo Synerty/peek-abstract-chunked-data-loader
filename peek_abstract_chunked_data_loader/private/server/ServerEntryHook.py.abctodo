@@ -4,10 +4,10 @@ from peek_plugin_base.server.PluginServerEntryHookABC import PluginServerEntryHo
 from peek_plugin_base.server.PluginServerStorageEntryHookABC import \
     PluginServerStorageEntryHookABC
 from peek_plugin_docdb.server.DocDbApiABC import DocDbApiABC
-from peek_abstract_data_loader._private.storage import DeclarativeBase
-from peek_abstract_data_loader._private.storage.DeclarativeBase import \
+from peek_abstract_chunked_data_loader._private.storage import DeclarativeBase
+from peek_abstract_chunked_data_loader._private.storage.DeclarativeBase import \
     loadStorageTuples
-from peek_abstract_data_loader._private.tuples import loadPrivateTuples
+from peek_abstract_chunked_data_loader._private.tuples import loadPrivateTuples
 from peek_core_search.server.SearchApiABC import SearchApiABC
 from .TupleActionProcessor import makeTupleActionProcessorHandler
 from .TupleDataObservable import makeTupleDataObservableHandler

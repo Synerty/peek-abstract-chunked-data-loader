@@ -2,15 +2,15 @@ import logging
 from typing import Optional
 
 from peek_plugin_base.agent.PluginAgentEntryHookABC import PluginAgentEntryHookABC
-from peek_abstract_data_loader._private.agent.AgentController import \
+from peek_abstract_chunked_data_loader._private.agent.AgentController import \
     AgentController
-from peek_abstract_data_loader._private.server.agent_handlers.RpcForAgent import \
+from peek_abstract_chunked_data_loader._private.server.agent_handlers.RpcForAgent import \
     RpcForAgent
-from peek_abstract_data_loader._private.storage.AppServerSettingsTuple import \
+from peek_abstract_chunked_data_loader._private.storage.AppServerSettingsTuple import \
     AppServerSettingsTuple
-from peek_abstract_data_loader._private.storage.DeclarativeBase import \
+from peek_abstract_chunked_data_loader._private.storage.DeclarativeBase import \
     loadStorageTuples
-from peek_abstract_data_loader._private.tuples import loadPrivateTuples
+from peek_abstract_chunked_data_loader._private.tuples import loadPrivateTuples
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from twisted.internet.defer import inlineCallbacks

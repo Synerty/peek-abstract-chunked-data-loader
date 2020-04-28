@@ -1,6 +1,6 @@
 import logging
 
-from peek_abstract_data_loader._private.storage.AppServerSettingsTuple import \
+from peek_abstract_chunked_data_loader._private.storage.AppServerSettingsTuple import \
     AppServerSettingsTuple
 from twisted.internet.defer import inlineCallbacks
 

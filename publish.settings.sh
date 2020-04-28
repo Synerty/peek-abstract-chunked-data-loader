@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PY_PACKAGE="peek_abstract_data_loader"
+PY_PACKAGE="peek_abstract_chunked_data_loader"
 PYPI_PUBLISH="1"
 
 GITHUB_PUSH="${GITHUB_PUSH:-1}"

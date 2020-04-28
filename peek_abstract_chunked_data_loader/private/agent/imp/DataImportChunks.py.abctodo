@@ -5,19 +5,19 @@ from datetime import datetime, timedelta
 from typing import List
 
 import pytz
-from peek_abstract_data_loader._private.server.agent_handlers.RpcForAgent import \
+from peek_abstract_chunked_data_loader._private.server.agent_handlers.RpcForAgent import \
     RpcForAgent
-from peek_abstract_data_loader._private.server.agent_handlers.RpcForAgentImport import \
+from peek_abstract_chunked_data_loader._private.server.agent_handlers.RpcForAgentImport import \
     RpcForAgentImport
-from peek_abstract_data_loader._private.storage.AppServerSettingsTuple import \
+from peek_abstract_chunked_data_loader._private.storage.AppServerSettingsTuple import \
     AppServerSettingsTuple
-from peek_abstract_data_loader._private.storage.ChunkLoadStateTuple import \
+from peek_abstract_chunked_data_loader._private.storage.ChunkLoadStateTuple import \
     ChunkLoadStateTuple
-from peek_abstract_data_loader._private.storage.CustomAttrTuple import \
+from peek_abstract_chunked_data_loader._private.storage.CustomAttrTuple import \
     CustomAttrTuple
-from peek_abstract_data_loader._private.storage.CustomHeaderTuple import \
+from peek_abstract_chunked_data_loader._private.storage.CustomHeaderTuple import \
     CustomHeaderTuple
-from peek_abstract_data_loader._private.storage.Setting import \
+from peek_abstract_chunked_data_loader._private.storage.Setting import \
     CHUNK_LOAD_PARALLELISM, CHUNK_HEX_LENGTH, CHUNK_POLL_PERIOD, CHUNK_POLL_SIZE
 from twisted.internet import reactor, task
 from twisted.internet.defer import inlineCallbacks, Deferred

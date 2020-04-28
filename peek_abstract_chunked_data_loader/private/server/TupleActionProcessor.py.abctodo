@@ -1,7 +1,7 @@
 from vortex.handler.TupleActionProcessor import TupleActionProcessor
 
-from peek_abstract_data_loader._private.PluginNames import abstracDataLoaderFilt
-from peek_abstract_data_loader._private.PluginNames import abstracDataLoaderActionProcessorName
+from peek_abstract_chunked_data_loader._private.PluginNames import abstracDataLoaderFilt
+from peek_abstract_chunked_data_loader._private.PluginNames import abstracDataLoaderActionProcessorName
 from .controller.MainController import MainController
 
 

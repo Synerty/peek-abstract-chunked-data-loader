@@ -1,6 +1,6 @@
 import logging
 
-from peek_abstract_data_loader._private.tuples.LoaderStatusTuple import \
+from peek_abstract_chunked_data_loader._private.tuples.LoaderStatusTuple import \
     LoaderStatusTuple
 from vortex.TupleSelector import TupleSelector
 from vortex.handler.TupleDataObservableHandler import TupleDataObservableHandler

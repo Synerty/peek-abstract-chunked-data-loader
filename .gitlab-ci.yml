@@ -8,7 +8,7 @@ stages:
 
 unit_tests_linux:
   allow_failure: false
-  image: nexus.synerty.com:5000/vortexpy-linux
+  image: nexus.synerty.com:5000/peek-linux
   only:
     - web
     - triggers
@@ -42,6 +42,6 @@ sonar:
     - nvm use $LATEST_NODE_VERSION
     - export NODE_PATH=`npm root -g`
     - npm install -g typescript@3.7.5
-    - sonar_scanner
+    - sonar-scanner
   tags:
     - linux

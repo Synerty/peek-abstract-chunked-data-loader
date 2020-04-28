@@ -1,7 +1,6 @@
 variables:
   LATEST_NODE_VERSION: v12.16.1
   NVM_DIR: /usr/local/nvm
-  BUILD: build
 
 stages:
   - test

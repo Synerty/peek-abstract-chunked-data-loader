@@ -3,7 +3,7 @@ import logging
 from peek_plugin_base.server.PluginServerEntryHookABC import PluginServerEntryHookABC
 from peek_plugin_base.server.PluginServerStorageEntryHookABC import \
     PluginServerStorageEntryHookABC
-from peek_plugin_docdb.server.DocDbApiABC import DocDbApiABC
+from peek_core_docdb.server.DocDbApiABC import DocDbApiABC
 from peek_abstract_chunked_data_loader._private.storage import DeclarativeBase
 from peek_abstract_chunked_data_loader._private.storage.DeclarativeBase import \
     loadStorageTuples
@@ -63,7 +63,7 @@ class ServerEntryHook(PluginServerEntryHookABC, PluginServerStorageEntryHookABC)
         )
 
         docDbPluginApi_: DocDbApiABC = self.platform.getOtherPluginApi(
-            "peek_plugin_docdb"
+            "peek_core_docdb"
         )
 
         # ----------------

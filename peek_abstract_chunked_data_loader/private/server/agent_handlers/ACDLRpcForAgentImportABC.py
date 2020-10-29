@@ -5,7 +5,7 @@ from typing import Optional
 from peek_abstract_chunked_data_loader.private.tuples.ACDLChunkLoadStateTupleABC import \
     ACDLChunkLoadStateTupleABC
 from peek_plugin_base.storage.LoadPayloadPgUtil import getTuplesPayloadBlocking
-from peek_storage.plpython.LoadPayloadPgUtil import LoadPayloadTupleResult
+from peek_storage_service.plpython.LoadPayloadPgUtil import LoadPayloadTupleResult
 from sqlalchemy import select
 from sqlalchemy.sql import Select
 

@@ -7,7 +7,7 @@ from typing import List, Tuple, Dict, Any
 import pytz
 from peek_core_search.tuples.ImportSearchObjectTuple import ImportSearchObjectTuple
 # Load the tuples we'll be sending to the server\
-from peek_plugin_docdb.tuples.ImportDocumentTuple import ImportDocumentTuple
+from peek_core_docdb.tuples.ImportDocumentTuple import ImportDocumentTuple
 from peek_abstract_chunked_data_loader._private.storage.CustomAttrTuple import \
     CustomAttrTuple
 from peek_abstract_chunked_data_loader._private.storage.CustomHeaderTuple import \

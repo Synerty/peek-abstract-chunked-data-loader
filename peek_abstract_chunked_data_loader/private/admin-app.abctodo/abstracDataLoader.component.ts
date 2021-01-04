@@ -1,12 +1,12 @@
-import {Component, OnInit} from "@angular/core";
+import { Component, OnInit } from "@angular/core"
 
 @Component({
-    selector: 'abstracDataLoader-admin',
-    templateUrl: 'abstracDataLoader.component.html'
+    selector: "abstracDataLoader-admin",
+    templateUrl: "abstracDataLoader.component.html"
 })
-export class AbstractDataLoaderComponent  implements OnInit {
-
+export class AbstractDataLoaderComponent implements OnInit {
+    
     ngOnInit() {
-
+    
     }
 }

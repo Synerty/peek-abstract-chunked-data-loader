@@ -2,9 +2,13 @@ import logging
 from abc import ABCMeta
 from typing import Optional
 
-from peek_abstract_chunked_data_loader.private.tuples.ACDLChunkLoadStateTupleABC import \
-    ACDLChunkLoadStateTupleABC
-from peek_plugin_base.storage.LoadPayloadPgUtil import getTuplesPayloadBlocking, LoadPayloadTupleResult
+from peek_abstract_chunked_data_loader.private.tuples.ACDLChunkLoadStateTupleABC import (
+    ACDLChunkLoadStateTupleABC,
+)
+from peek_plugin_base.storage.LoadPayloadPgUtil import (
+    getTuplesPayloadBlocking,
+    LoadPayloadTupleResult,
+)
 from sqlalchemy import select
 from sqlalchemy.sql import Select
 
@@ -18,11 +22,10 @@ class ACDLRpcForAgentImportABC(metaclass=ABCMeta):
         self._dbSessionCreator = dbSessionCreator
 
     # -------------
-    def adlInitialLoadOfStatePayloadBlocking(self, offset: int,
-                                             count: int,
-                                             sql: Optional[Select] = None
-                                             ) -> Optional[bytes]:
-        """ Chunked Key Index - Initial Load Chunks Blocking
+    def adlInitialLoadOfStatePayloadBlocking(
+        self, offset: int, count: int, sql: Optional[Select] = None
+    ) -> Optional[bytes]:
+        """Chunked Key Index - Initial Load Chunks Blocking
 
         This method is used to load the initial set of chunks from the server
         to the client.
@@ -30,26 +33,27 @@ class ACDLRpcForAgentImportABC(metaclass=ABCMeta):
         """
         if sql is None:
             table = self._StateTupleDeclarative.__table__
-            sql = select([table]) \
-                .order_by(self._StateTupleDeclarative.sqlCoreIdColumn()) \
-                .offset(offset) \
+            sql = (
+                select([table])
+                .order_by(self._StateTupleDeclarative.sqlCoreIdColumn())
+                .offset(offset)
                 .limit(count)
+            )
 
-        result: LoadPayloadTupleResult = (getTuplesPayloadBlocking(
+        result: LoadPayloadTupleResult = getTuplesPayloadBlocking(
             self._dbSessionCreator,
             sql,
             self._StateTupleDeclarative.sqlCoreLoad,
-            fetchSize=count
-        ))
+            fetchSize=count,
+        )
 
         return result.encodedPayload
 
     # -------------
-    def adlStoreStateInfoTuple(self,
-                               item: _StateTupleDeclarative) -> _StateTupleDeclarative:
-        """ Store the Info Tuples
-
-        """
+    def adlStoreStateInfoTuple(
+        self, item: _StateTupleDeclarative
+    ) -> _StateTupleDeclarative:
+        """Store the Info Tuples"""
 
         session = self._dbSessionCreator()
         try:

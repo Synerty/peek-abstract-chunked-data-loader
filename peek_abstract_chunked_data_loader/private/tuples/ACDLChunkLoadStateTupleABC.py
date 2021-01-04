@@ -5,7 +5,7 @@ logger = logging.getLogger(__name__)
 
 
 class ACDLChunkLoadStateTupleABC:
-    """ Agent Import Chunk
+    """Agent Import Chunk
 
     This table stores information used by the agent about when things need updating.
     There is no relation to the server objects, the agent can use this how ever it wants.
@@ -17,7 +17,7 @@ class ACDLChunkLoadStateTupleABC:
     @classmethod
     @abstractmethod
     def sqlCoreIdColumn(cls):
-        """ SQL Core - Chunk Key Column
+        """SQL Core - Chunk Key Column
 
         This method should return the SQL Core column
 
@@ -33,7 +33,7 @@ class ACDLChunkLoadStateTupleABC:
     @classmethod
     @abstractmethod
     def sqlCoreLoad(cls, row):
-        """ SQL Core - Load
+        """SQL Core - Load
 
         This method creates the declarative from an SQL core query.
         There is a lot of overhead from using the ORM to load this

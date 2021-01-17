@@ -1,11 +1,13 @@
 import { Component } from "@angular/core"
-import { extend, TupleLoader, VortexService } from "@synerty/vortexjs"
+import {
+    extend,
+    NgLifeCycleEvents,
+    TupleLoader,
+    VortexService
+} from "@synerty/vortexjs"
 import { abstracDataLoaderFilt } from "../PluginNames"
 import { AppServerSettingsTuple } from "../tuples/AppServerSettingsTuple"
-import {
-    BalloonMsgService,
-    NgLifeCycleEvents
-} from "@synerty/peek-plugin-base-js"
+import { BalloonMsgService } from "@synerty/peek-plugin-base-js"
 
 @Component({
     selector: "pl-pof-diagram-loader-edit-source-settings",

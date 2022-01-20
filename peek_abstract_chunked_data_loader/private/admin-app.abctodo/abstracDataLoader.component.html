@@ -10,32 +10,35 @@
         <!-- Loader Status Tab -->
         <li role="presentation">
             <a
-                aria-controls="loaderStatus" data-toggle="tab"
+                aria-controls="loaderStatus"
+                data-toggle="tab"
                 href="#loaderStatus"
                 role="tab"
-            >Loader Status
+                >Loader Status
             </a>
         </li>
         <!-- Edit Source Server Settings Tab -->
         <li role="presentation">
             <a
-                aria-controls="editAppSetting" data-toggle="tab"
+                aria-controls="editAppSetting"
+                data-toggle="tab"
                 href="#editAppSetting"
                 role="tab"
-            >Edit Source Server Settings
+                >Edit Source Server Settings
             </a>
         </li>
         <!-- Edit Settings Tab -->
         <li role="presentation">
             <a
-                aria-controls="editSetting" data-toggle="tab"
+                aria-controls="editSetting"
+                data-toggle="tab"
                 href="#editSetting"
                 role="tab"
-            >Edit General Settings
+                >Edit General Settings
             </a>
         </li>
     </ul>
-    
+
     <!-- Tab panes -->
     <div class="tab-content">
         <!-- Home Tab -->
@@ -43,20 +46,22 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <h1 class="text-center">Data Loader</h1>
-                    <p>This plugin loads the information from a source
-                       server.</p>
-                    <p>It then populates the Search plugin so the equipment can
-                       be found,
-                       with the data:</p>
+                    <p>
+                        This plugin loads the information from a source server.
+                    </p>
+                    <p>
+                        It then populates the Search plugin so the equipment can
+                        be found, with the data:
+                    </p>
                     <ul>
                         <li>Item ID, Aka Key</li>
                         <li>Item Alias</li>
                         <li>Item Name</li>
                     </ul>
-                    <p>The same information is also pushed to the DocDB plugin
-                       along with
-                       the configured custom attributes.</p>
-                
+                    <p>
+                        The same information is also pushed to the DocDB plugin
+                        along with the configured custom attributes.
+                    </p>
                 </div>
             </div>
         </div>
@@ -72,6 +77,5 @@
         <div class="tab-pane" id="editSetting" role="tabpanel">
             <pl-pof-diagram-loader-edit-setting></pl-pof-diagram-loader-edit-setting>
         </div>
-    
     </div>
 </div>

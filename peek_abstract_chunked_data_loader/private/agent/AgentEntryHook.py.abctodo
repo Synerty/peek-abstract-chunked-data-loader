@@ -108,6 +108,15 @@ class AgentEntryHook(PluginAgentEntryHookABC):
 
     def _reconnectToOracle(self):
 
+        engineArgs = {
+            "echo": False,  # Print every SQL statement executed
+            "pool_size": 2,  # Number of connections to keep open
+            "max_overflow": 10,
+            # Number that the pool size can exceed when required
+            "pool_timeout": 300,  # Timeout for getting conn from pool
+            "pool_recycle": 1800,  # Reconnect after 30 minutes
+        }
+
         logger.debug("Connecting to ORACLE %s as %s",
                      self._appSettings.appHost, self._appSettings.appOracleUsername)
 
@@ -115,7 +124,7 @@ class AgentEntryHook(PluginAgentEntryHookABC):
                                                 self._appSettings.appOraclePassword,
                                                 self._appSettings.appHost)
         # Create the engine
-        self._oracleEngine = create_engine(dbUrl)
+        self._oracleEngine = create_engine(dbUrl, **engineArgs)
 
         # Create the session maker
         self._oracleSessionCreator = scoped_session(

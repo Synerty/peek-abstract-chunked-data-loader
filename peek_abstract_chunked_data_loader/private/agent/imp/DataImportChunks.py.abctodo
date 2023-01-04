@@ -152,7 +152,7 @@ class DataImportChunks:
             return
 
         # Queue up a few more chunks
-        while len(self._queuedChunks) < self.CHUNK_POLL_PERIOD:
+        while len(self._queuedChunks) < self.CHUNK_POLL_SIZE:
             self._queueNextChunk(next(self._nextChunkIter))
 
         self._processNext()

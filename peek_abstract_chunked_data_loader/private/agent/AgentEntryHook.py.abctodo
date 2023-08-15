@@ -11,7 +11,7 @@ from peek_abstract_chunked_data_loader._private.storage.AppServerSettingsTuple i
 from peek_abstract_chunked_data_loader._private.storage.DeclarativeBase import \
     loadStorageTuples
 from peek_abstract_chunked_data_loader._private.tuples import loadPrivateTuples
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker, scoped_session
 from twisted.internet.defer import inlineCallbacks
 
@@ -132,7 +132,7 @@ class AgentEntryHook(PluginAgentEntryHookABC):
             sessionmaker(bind=self._oracleEngine))
 
         session = self._oracleSessionCreator()
-        works = session.execute("SELECT 'Oracle oracle query' FROM DUAL")
+        works = session.execute(text("SELECT 'Oracle oracle query' FROM DUAL"))
         for row in works:
             logger.debug(row[0])
         session.close()

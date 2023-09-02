@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import {
-    extend,
     NgLifeCycleEvents,
     TupleLoader,
     VortexService,
@@ -28,7 +27,7 @@ export class EditAppSettingsComponent extends NgLifeCycleEvents {
         super();
 
         this.loader = vortexService.createTupleLoader(this, () =>
-            extend({}, this.filt, abstracDataLoaderFilt)
+            Object.assign({}, this.filt, abstracDataLoaderFilt)
         );
 
         this.loader.observable.subscribe((tuples: AppServerSettingsTuple[]) => {

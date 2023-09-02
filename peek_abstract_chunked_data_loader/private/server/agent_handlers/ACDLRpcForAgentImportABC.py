@@ -34,7 +34,7 @@ class ACDLRpcForAgentImportABC(metaclass=ABCMeta):
         if sql is None:
             table = self._StateTupleDeclarative.__table__
             sql = (
-                select([table])
+                select(table)
                 .order_by(self._StateTupleDeclarative.sqlCoreIdColumn())
                 .offset(offset)
                 .limit(count)
